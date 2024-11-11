@@ -13,7 +13,7 @@ Natural Language Interaction: The assistant provides natural, human-like interac
 
 ## How It Works:
 1. User Interaction:
-* The user asks a query such as "How many flights does American Airlines have?" or "What is the most frequent destination for Airline X?"
+   * The user asks a query such as "How many flights does American Airlines have?" or "What is the most frequent destination for Airline X?"
   
 2. Deflection Logic:
 * The deflection logic is invoked to decide which pipeline (SQL or RAG) should handle the query. This is based on a few-shot learning model that classifies whether the query requires structured data or more context-based generation.
