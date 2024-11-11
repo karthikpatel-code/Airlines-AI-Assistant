@@ -48,7 +48,7 @@ Based on the data retrieved from either pipeline, the assistant constructs and d
 * Natural Language to SQL (NL_to_SQL): Converts user queries into SQL queries for precise database retrieval.
 * Deflection Logic: Routes queries to the appropriate pipeline (SQL or RAG) based on the nature of the query using a few-shot learning approach.
 
-# Deflection Logic Workflow:
+## Deflection Logic Workflow:
 The deflection logic uses a simple decision model to route queries between the SQL and RAG pipelines:
 
 1. Query Classification:
@@ -67,6 +67,9 @@ The deflection logic uses a simple decision model to route queries between the S
 4. Response Construction:
     * SQL Pipeline Responses: These are precise, data-driven answers like "American Airlines has 120 flights listed."
     * RAG Pipeline Responses: These are generated insights, summaries, and comparisons based on the embeddings.
+  
+  ![image](https://github.com/user-attachments/assets/67ae84c5-272b-4691-a2b6-681b4bb25e16)
+
 
 ## Expected Outcomes:
 * Accurate Responses: By leveraging OpenAI API endpoints for both SQL query generation and context-based answer generation, the system ensures that user queries receive precise, relevant responses.
