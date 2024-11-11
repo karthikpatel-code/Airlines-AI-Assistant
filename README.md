@@ -68,7 +68,19 @@ The deflection logic uses a simple decision model to route queries between the S
     * SQL Pipeline Responses: These are precise, data-driven answers like "American Airlines has 120 flights listed."
     * RAG Pipeline Responses: These are generated insights, summaries, and comparisons based on the embeddings.
   
-  ![image](https://github.com/user-attachments/assets/67ae84c5-272b-4691-a2b6-681b4bb25e16)
+  
+## Sample Outputs :
+  
+![image](https://github.com/user-attachments/assets/a1fbb234-1bc8-4c31-ba49-ad82832beb0e)
+
+![image](https://github.com/user-attachments/assets/6cfad83b-eacf-4058-b2cb-5fd0149ea4dd)
+
+![image](https://github.com/user-attachments/assets/fa648330-86a8-4922-ad55-d473e2f1947e)
+
+![image](https://github.com/user-attachments/assets/fbb54854-7194-45c8-8b2f-1ffbb332a0af)
+
+![image](https://github.com/user-attachments/assets/f73a2e44-d050-425a-bb6d-a0a7ce926740)
+
 
 
 ## Expected Outcomes:
