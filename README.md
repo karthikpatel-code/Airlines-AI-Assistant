@@ -27,55 +27,49 @@ Natural Language Interaction: The assistant provides natural, human-like interac
         * For SQL-related queries, OpenAI LLM endpoints assist in translating the user’s natural language input into the corresponding SQL query.
         * For RAG-based queries, the OpenAI API generates insightful answers based on context retrieved from ChromaDB embeddings.
 
-##Response Generation:
+## Response Generation:
 
-The SQL pipeline returns precise, factual data (e.g., "American Airlines operates 120 flights").
-The RAG pipeline generates insightful, context-based responses, such as summaries or comparisons (e.g., "American Airlines has the most flights listed among all airlines, followed by Delta Airlines").
-Both pipelines feed into the final response generator, ensuring the user receives a complete and informative answer.
-Final Answer:
+* The SQL pipeline returns precise, factual data (e.g., "American Airlines operates 120 flights").
+* The RAG pipeline generates insightful, context-based responses, such as summaries or comparisons (e.g., "American Airlines has the most flights listed among all airlines, followed by Delta Airlines").
+* Both pipelines feed into the final response generator, ensuring the user receives a complete and informative answer.
+  
+## Final Answer:
 
 Based on the data retrieved from either pipeline, the assistant constructs and delivers a comprehensive response to the user.
 
 
-# Technologies Used:
-Python: Core language used for development.
-OpenAI GPT-3.5/4: Used for natural language processing, understanding, and response generation.
-ChromaDB: A vector database that stores embeddings for semantic search and retrieval.
-SQLite3: Used for storing structured airline data, such as flight counts, bookings, and destinations.
-Streamlit: Framework for creating a user-friendly interface.
-Retrieval-Augmented Generation (RAG): Combines knowledge retrieval and generation to answer complex queries.
-Natural Language to SQL (NL_to_SQL): Converts user queries into SQL queries for precise database retrieval.
-Deflection Logic: Routes queries to the appropriate pipeline (SQL or RAG) based on the nature of the query using a few-shot learning approach.
+## Technologies Used:
+* Python: Core language used for development.
+* OpenAI GPT-3.5/4: Used for natural language processing, understanding, and response generation.
+* ChromaDB: A vector database that stores embeddings for semantic search and retrieval.
+* SQLite3: Used for storing structured airline data, such as flight counts, bookings, and destinations.
+* Streamlit: Framework for creating a user-friendly interface.
+* Retrieval-Augmented Generation (RAG): Combines knowledge retrieval and generation to answer complex queries.
+* Natural Language to SQL (NL_to_SQL): Converts user queries into SQL queries for precise database retrieval.
+* Deflection Logic: Routes queries to the appropriate pipeline (SQL or RAG) based on the nature of the query using a few-shot learning approach.
 
 # Deflection Logic Workflow:
 The deflection logic uses a simple decision model to route queries between the SQL and RAG pipelines:
 
-Query Classification:
+1. Query Classification:
+   * The query is first classified to determine if it requires structured data (SQL) or context-based response (RAG).
+   * SQL-related Queries: These include requests for data like flight counts, airline bookings, or destinations. Example queries:
+      * "How many flights does American Airlines have?"
+      * "Which airline operates the most flights?"
+      * "What is the number of bookings for Delta Airlines?"
+   * RAG-related Queries: These involve contextual insights, comparisons, or trend analysis. Example queries:
+      * "What are the most frequent destinations for each airline?"
+2. Pipeline Routing:
+    * SQL Pipeline: For structured queries, the system constructs and executes SQL queries to fetch data from the SQLite3 database.
+    * RAG Pipeline: For complex, unstructured queries, the system retrieves contextually relevant information from the ChromaDB embeddings.
+3. Query Handling:
+    Based on the classification, the appropriate pipeline (SQL or RAG) is invoked to fetch the relevant information.
+4. Response Construction:
+    * SQL Pipeline Responses: These are precise, data-driven answers like "American Airlines has 120 flights listed."
+    * RAG Pipeline Responses: These are generated insights, summaries, and comparisons based on the embeddings.
 
-The query is first classified to determine if it requires structured data (SQL) or context-based response (RAG).
-
-SQL-related Queries: These include requests for data like flight counts, airline bookings, or destinations. Example queries:
-
-"How many flights does American Airlines have?"
-"What is the number of bookings for Delta Airlines?"
-RAG-related Queries: These involve contextual insights, comparisons, or trend analysis. Example queries:
-
-"Which airline operates the most flights?"
-"What are the most frequent destinations for each airline?"
-Pipeline Routing:
-
-SQL Pipeline: For structured queries, the system constructs and executes SQL queries to fetch data from the SQLite3 database.
-RAG Pipeline: For complex, unstructured queries, the system retrieves contextually relevant information from the ChromaDB embeddings.
-Query Handling:
-
-Based on the classification, the appropriate pipeline (SQL or RAG) is invoked to fetch the relevant information.
-Response Construction:
-
-SQL Pipeline Responses: These are precise, data-driven answers like "American Airlines has 120 flights listed."
-RAG Pipeline Responses: These are generated insights, summaries, and comparisons based on the embeddings.
-
-# Expected Outcomes:
-Accurate Responses: By leveraging OpenAI API endpoints for both SQL query generation and context-based answer generation, the system ensures that user queries receive precise, relevant responses.
-Efficient Query Handling: The deflection logic optimizes query processing by directing them to the correct pipeline, ensuring that responses are generated quickly and accurately.
-User-Friendly Interaction: The system provides a smooth and natural conversational experience for the user, powered by OpenAI LLM endpoints and data from SQLite3 and ChromaDB.
+## Expected Outcomes:
+* Accurate Responses: By leveraging OpenAI API endpoints for both SQL query generation and context-based answer generation, the system ensures that user queries receive precise, relevant responses.
+* Efficient Query Handling: The deflection logic optimizes query processing by directing them to the correct pipeline, ensuring that responses are generated quickly and accurately.
+* User-Friendly Interaction: The system provides a smooth and natural conversational experience for the user, powered by OpenAI LLM endpoints and data from SQLite3 and ChromaDB.
 The integration of OpenAI's LLM endpoints enables the Airlines Data Assistant to effectively handle a wide range of queries, providing users with highly informative and context-aware responses.
