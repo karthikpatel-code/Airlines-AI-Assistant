@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS Airlines_data (
+    id INTEGER PRIMARY KEY,
+    airline_name TEXT NOT NULL,
+    departure_date DATETIME NOT NULL
+);
