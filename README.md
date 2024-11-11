@@ -17,6 +17,15 @@ To run this project, Install Python (version 3.11 recommended) and use pip to in
 1. Clone the Repository
    ```bash
    git clone https://github.com/yourusername/Drowsiness-Detection-System.git
+   
+2. Install the Dependencies
+      ```bash
+   pip install -r requirements.txt
+
+3. Run the System:
+         ```bash
+   streamlit run UI.py
+   
 ## How It Works:
 1. User Interaction:
    * The user asks a query such as "How many flights does American Airlines have?" or "What is the most frequent destination for Airline X?"
