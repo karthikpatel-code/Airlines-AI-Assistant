@@ -23,7 +23,7 @@ To run this project, Install Python (version 3.11 recommended) and use pip to in
    pip install -r requirements.txt
 
 3. Run the System:
-         ```bash
+      ```bash
    streamlit run UI.py
    
 ## How It Works:
