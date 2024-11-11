@@ -12,14 +12,13 @@ Natural Language Interaction: The assistant provides natural, human-like interac
 
 
 ## How It Works:
-### User Interaction:
-
-The user asks a query such as "How many flights does American Airlines have?" or "What is the most frequent destination for Airline X?"
-Deflection Logic:
-
-The deflection logic is invoked to decide which pipeline (SQL or RAG) should handle the query. This is based on a few-shot learning model that classifies whether the query requires structured data or more context-based generation.
-SQL Pipeline: If the query involves precise data points like flight counts, bookings, or other structured information, the query is routed to the SQL pipeline.
-RAG Pipeline: If the query requires a contextual, detailed response or summary, such as trends or comparisons, the query is routed to the RAG pipeline.
+1. User Interaction:
+* The user asks a query such as "How many flights does American Airlines have?" or "What is the most frequent destination for Airline X?"
+  
+2. Deflection Logic:
+* The deflection logic is invoked to decide which pipeline (SQL or RAG) should handle the query. This is based on a few-shot learning model that classifies whether the query requires structured data or more context-based generation.
+** SQL Pipeline: If the query involves precise data points like flight counts, bookings, or other structured information, the query is routed to the SQL pipeline.
+** RAG Pipeline: If the query requires a contextual, detailed response or summary, such as trends or comparisons, the query is routed to the RAG pipeline.
 SQL Pipeline Query Execution:
 
 For queries routed to the SQL pipeline, the system generates SQL queries to fetch relevant data from the SQLite3 database. This allows for exact retrieval of structured data.
