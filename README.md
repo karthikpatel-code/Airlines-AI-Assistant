@@ -10,6 +10,14 @@ The Airlines Data Assistant is an intelligent conversational AI solution designe
 * Hybrid RAG + SQL Pipeline: A robust hybrid architecture that combines the strengths of both RAG (contextual retrieval and generation) and SQL (precise data querying) to handle a wide range of queries.
 Natural Language Interaction: The assistant provides natural, human-like interactions, responding to user queries about flight details, bookings, destinations, airline rankings, and more.
 
+## Project Prerequisites
+To run this project, Install Python (version 3.11 recommended) and use pip to install the required packages
+
+## Installation
+1. Clone the Repository
+   ```python
+def hello_world():
+    print("Hello, World!")
 
 ## How It Works:
 1. User Interaction:
@@ -82,9 +90,7 @@ The deflection logic uses a simple decision model to route queries between the S
 ![image](https://github.com/user-attachments/assets/f73a2e44-d050-425a-bb6d-a0a7ce926740)
 
 
-```python
-def hello_world():
-    print("Hello, World!")
+
 
 
 ## Expected Outcomes:
