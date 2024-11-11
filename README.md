@@ -4,15 +4,15 @@ The Airlines Data Assistant is an intelligent conversational AI solution designe
 
 ## Key Features:
 
-OpenAI LLM Endpoints: The system leverages OpenAI's API endpoints to generate responses for both structured and unstructured queries. These endpoints process natural language queries and generate meaningful,   relevant answers.
-Deflection Logic: The system intelligently routes queries to the appropriate pipeline based on predefined rules and a few-shot learning model. For example, queries related to structured data (e.g., flight counts, airline bookings) are directed to the SQL pipeline, while unstructured queries (e.g., summaries, insights, comparisons) are routed to the RAG pipeline.
-Context-Aware Responses: Using ChromaDB embeddings, the assistant retrieves context-specific data and uses it in combination with both the SQL and RAG pipelines to provide the most accurate and relevant responses.
-Hybrid RAG + SQL Pipeline: A robust hybrid architecture that combines the strengths of both RAG (contextual retrieval and generation) and SQL (precise data querying) to handle a wide range of queries.
+* OpenAI LLM Endpoints: The system leverages OpenAI's API endpoints to generate responses for both structured and unstructured queries. These endpoints process natural language queries and generate meaningful,   relevant answers.
+* Deflection Logic: The system intelligently routes queries to the appropriate pipeline based on predefined rules and a few-shot learning model. For example, queries related to structured data (e.g., flight counts, airline bookings) are directed to the SQL pipeline, while unstructured queries (e.g., summaries, insights, comparisons) are routed to the RAG pipeline.
+* Context-Aware Responses: Using ChromaDB embeddings, the assistant retrieves context-specific data and uses it in combination with both the SQL and RAG pipelines to provide the most accurate and relevant responses.
+* Hybrid RAG + SQL Pipeline: A robust hybrid architecture that combines the strengths of both RAG (contextual retrieval and generation) and SQL (precise data querying) to handle a wide range of queries.
 Natural Language Interaction: The assistant provides natural, human-like interactions, responding to user queries about flight details, bookings, destinations, airline rankings, and more.
 
 
-# How It Works:
-User Interaction:
+## How It Works:
+### User Interaction:
 
 The user asks a query such as "How many flights does American Airlines have?" or "What is the most frequent destination for Airline X?"
 Deflection Logic:
