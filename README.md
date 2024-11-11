@@ -2,7 +2,7 @@
 # Overview:
 The Airlines Data Assistant is an intelligent conversational AI solution designed to answer user queries about airline-related data. It combines a Retrieval-Augmented Generation (RAG) pipeline and a SQL-based pipeline, powered by ChromaDB embeddings and SQLite3, respectively. The assistant is designed with deflection logic that intelligently routes queries to either the SQL pipeline or the RAG pipeline based on a few-shot learning approach. This ensures that user queries are handled efficiently, with the right pipeline being used based on the nature of the query, allowing the assistant to provide precise and data-driven responses.
 
-# Key Features:
+## Key Features:
 
 OpenAI LLM Endpoints: The system leverages OpenAI's API endpoints to generate responses for both structured and unstructured queries. These endpoints process natural language queries and generate meaningful,   relevant answers.
 Deflection Logic: The system intelligently routes queries to the appropriate pipeline based on predefined rules and a few-shot learning model. For example, queries related to structured data (e.g., flight counts, airline bookings) are directed to the SQL pipeline, while unstructured queries (e.g., summaries, insights, comparisons) are routed to the RAG pipeline.
