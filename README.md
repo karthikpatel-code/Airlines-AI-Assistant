@@ -82,6 +82,10 @@ The deflection logic uses a simple decision model to route queries between the S
 ![image](https://github.com/user-attachments/assets/f73a2e44-d050-425a-bb6d-a0a7ce926740)
 
 
+```python
+def hello_world():
+    print("Hello, World!")
+
 
 ## Expected Outcomes:
 * Accurate Responses: By leveraging OpenAI API endpoints for both SQL query generation and context-based answer generation, the system ensures that user queries receive precise, relevant responses.
