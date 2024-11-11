@@ -36,3 +36,40 @@ Final Answer:
 Based on the data retrieved from either pipeline, the assistant constructs and delivers a comprehensive response to the user.
 
 
+Technologies Used:
+Python: Core language used for development.
+OpenAI GPT-3.5/4: Used for natural language processing, understanding, and response generation.
+ChromaDB: A vector database that stores embeddings for semantic search and retrieval.
+SQLite3: Used for storing structured airline data, such as flight counts, bookings, and destinations.
+Streamlit: Framework for creating a user-friendly interface.
+Retrieval-Augmented Generation (RAG): Combines knowledge retrieval and generation to answer complex queries.
+Natural Language to SQL (NL_to_SQL): Converts user queries into SQL queries for precise database retrieval.
+Deflection Logic: Routes queries to the appropriate pipeline (SQL or RAG) based on the nature of the query using a few-shot learning approach.
+
+Deflection Logic Workflow:
+The deflection logic uses a simple decision model to route queries between the SQL and RAG pipelines:
+
+Query Classification:
+
+The query is first classified to determine if it requires structured data (SQL) or context-based response (RAG).
+
+SQL-related Queries: These include requests for data like flight counts, airline bookings, or destinations. Example queries:
+
+"How many flights does American Airlines have?"
+"What is the number of bookings for Delta Airlines?"
+RAG-related Queries: These involve contextual insights, comparisons, or trend analysis. Example queries:
+
+"Which airline operates the most flights?"
+"What are the most frequent destinations for each airline?"
+Pipeline Routing:
+
+SQL Pipeline: For structured queries, the system constructs and executes SQL queries to fetch data from the SQLite3 database.
+RAG Pipeline: For complex, unstructured queries, the system retrieves contextually relevant information from the ChromaDB embeddings.
+Query Handling:
+
+Based on the classification, the appropriate pipeline (SQL or RAG) is invoked to fetch the relevant information.
+Response Construction:
+
+SQL Pipeline Responses: These are precise, data-driven answers like "American Airlines has 120 flights listed."
+RAG Pipeline Responses: These are generated insights, summaries, and comparisons based on the embeddings.
+
