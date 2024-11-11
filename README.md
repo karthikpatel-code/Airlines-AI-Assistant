@@ -1,8 +1,8 @@
 # Airlines-AI-Assistant
-Overview:
+# Overview:
 The Airlines Data Assistant is an intelligent conversational AI solution designed to answer user queries about airline-related data. It combines a Retrieval-Augmented Generation (RAG) pipeline and a SQL-based pipeline, powered by ChromaDB embeddings and SQLite3, respectively. The assistant is designed with deflection logic that intelligently routes queries to either the SQL pipeline or the RAG pipeline based on a few-shot learning approach. This ensures that user queries are handled efficiently, with the right pipeline being used based on the nature of the query, allowing the assistant to provide precise and data-driven responses.
 
-Key Features:
+# Key Features:
 
 OpenAI LLM Endpoints: The system leverages OpenAI's API endpoints to generate responses for both structured and unstructured queries. These endpoints process natural language queries and generate meaningful,   relevant answers.
 Deflection Logic: The system intelligently routes queries to the appropriate pipeline based on predefined rules and a few-shot learning model. For example, queries related to structured data (e.g., flight counts, airline bookings) are directed to the SQL pipeline, while unstructured queries (e.g., summaries, insights, comparisons) are routed to the RAG pipeline.
@@ -11,7 +11,7 @@ Hybrid RAG + SQL Pipeline: A robust hybrid architecture that combines the streng
 Natural Language Interaction: The assistant provides natural, human-like interactions, responding to user queries about flight details, bookings, destinations, airline rankings, and more.
 
 
-How It Works:
+# How It Works:
 User Interaction:
 
 The user asks a query such as "How many flights does American Airlines have?" or "What is the most frequent destination for Airline X?"
@@ -36,7 +36,7 @@ Final Answer:
 Based on the data retrieved from either pipeline, the assistant constructs and delivers a comprehensive response to the user.
 
 
-Technologies Used:
+# Technologies Used:
 Python: Core language used for development.
 OpenAI GPT-3.5/4: Used for natural language processing, understanding, and response generation.
 ChromaDB: A vector database that stores embeddings for semantic search and retrieval.
@@ -46,7 +46,7 @@ Retrieval-Augmented Generation (RAG): Combines knowledge retrieval and generatio
 Natural Language to SQL (NL_to_SQL): Converts user queries into SQL queries for precise database retrieval.
 Deflection Logic: Routes queries to the appropriate pipeline (SQL or RAG) based on the nature of the query using a few-shot learning approach.
 
-Deflection Logic Workflow:
+# Deflection Logic Workflow:
 The deflection logic uses a simple decision model to route queries between the SQL and RAG pipelines:
 
 Query Classification:
@@ -73,3 +73,8 @@ Response Construction:
 SQL Pipeline Responses: These are precise, data-driven answers like "American Airlines has 120 flights listed."
 RAG Pipeline Responses: These are generated insights, summaries, and comparisons based on the embeddings.
 
+# Expected Outcomes:
+Accurate Responses: By leveraging OpenAI API endpoints for both SQL query generation and context-based answer generation, the system ensures that user queries receive precise, relevant responses.
+Efficient Query Handling: The deflection logic optimizes query processing by directing them to the correct pipeline, ensuring that responses are generated quickly and accurately.
+User-Friendly Interaction: The system provides a smooth and natural conversational experience for the user, powered by OpenAI LLM endpoints and data from SQLite3 and ChromaDB.
+The integration of OpenAI's LLM endpoints enables the Airlines Data Assistant to effectively handle a wide range of queries, providing users with highly informative and context-aware responses.
