@@ -16,16 +16,18 @@ Natural Language Interaction: The assistant provides natural, human-like interac
    * The user asks a query such as "How many flights does American Airlines have?" or "What is the most frequent destination for Airline X?"
   
 2. Deflection Logic:
-* The deflection logic is invoked to decide which pipeline (SQL or RAG) should handle the query. This is based on a few-shot learning model that classifies whether the query requires structured data or more context-based generation.
-** SQL Pipeline: If the query involves precise data points like flight counts, bookings, or other structured information, the query is routed to the SQL pipeline.
-** RAG Pipeline: If the query requires a contextual, detailed response or summary, such as trends or comparisons, the query is routed to the RAG pipeline.
-SQL Pipeline Query Execution:
+   * The deflection logic is invoked to decide which pipeline (SQL or RAG) should handle the query. This is based on a few-shot learning model that classifies whether the query requires structured data or more context-based generation.
+     
+3. Pipeline Execution:
+   * SQL Pipeline: For structured data, the assistant routes the query to the SQL pipeline, where it executes SQL queries against an SQLite3 database. The assistant uses OpenAI's endpoints for natural language processing to translate user queries into SQL queries.
+   * RAG Pipeline: For unstructured queries, the assistant utilizes the RAG pipeline with ChromaDB embeddings to retrieve context from past interactions or stored data. The assistant then uses OpenAI LLM endpoints to generate an insightful response based on the retrieved context.
+     
+4. OpenAI LLM API Calls:
+    * Both pipelines leverage OpenAI’s API for natural language processing and response generation:
+        * For SQL-related queries, OpenAI LLM endpoints assist in translating the user’s natural language input into the corresponding SQL query.
+        * For RAG-based queries, the OpenAI API generates insightful answers based on context retrieved from ChromaDB embeddings.
 
-For queries routed to the SQL pipeline, the system generates SQL queries to fetch relevant data from the SQLite3 database. This allows for exact retrieval of structured data.
-RAG Pipeline Query Execution:
-
-For queries routed to the RAG pipeline, the system uses ChromaDB embeddings to retrieve contextually relevant data. This enables the assistant to provide high-level insights, summaries, and comparisons based on the stored data.
-Response Generation:
+##Response Generation:
 
 The SQL pipeline returns precise, factual data (e.g., "American Airlines operates 120 flights").
 The RAG pipeline generates insightful, context-based responses, such as summaries or comparisons (e.g., "American Airlines has the most flights listed among all airlines, followed by Delta Airlines").
