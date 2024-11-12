@@ -12,7 +12,8 @@ Natural Language Interaction: The assistant provides natural, human-like interac
 
 ## Architecture Diagram
 
-![Airlines AI Assist](https://github.com/user-attachments/assets/9d82871d-c41b-442b-bdd1-c57ad268d77e)
+![Airlines AI Assist](https://github.com/user-attachments/assets/8478bd2e-ff87-4888-853e-ef3ed858aec6)
+
 
 
 ## Project Prerequisites
