@@ -51,7 +51,7 @@ To run this project, Install Python (version 3.11 recommended) and use pip to in
 ## Response Generation:
 
 * The SQL pipeline returns precise, factual data (e.g., "American Airlines operates 120 flights").
-* The RAG pipeline generates insightful, context-based responses, such as summaries or comparisons (e.g., "American Airlines has the most flights listed among all airlines, followed by Delta Airlines").
+* The RAG pipeline generates insightful, context-based responses, such as summaries or comparisons.
 * Both pipelines feed into the final response generator, ensuring the user receives a complete and informative answer.
   
 ## Final Answer:
@@ -88,7 +88,15 @@ The deflection logic uses a simple decision model to route queries between the S
 4. **Response Construction**:
     * **SQL Pipeline Responses**: These are precise, data-driven answers like "American Airlines has 120 flights listed."
     * **RAG Pipeline Responses**: These are generated insights, summaries, and comparisons based on the embeddings.
-  
+
+## Test Cases Verified
+
+1. Which airline has the most flights listed ?
+2. Which airline has the least flights listed ?
+3. What is the flight count of Delta Airlines ?
+4. Month with the highest number of bookings ?
+5. Patterns in booking cancellations, focusing on specific days or airlines with high cancellation rates
+6. Analyze seat occupancy to find the most and least popular flights.
   
 ## Sample Outputs :
   
