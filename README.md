@@ -40,8 +40,8 @@ To run this project, Install Python (version 3.11 recommended) and use pip to in
    * The deflection logic is invoked to decide which pipeline (SQL or RAG) should handle the query. This is based on a few-shot learning model that classifies whether the query requires structured data or more context-based generation.
      
 3. **Pipeline Execution**:
-   * SQL Pipeline: For structured data, the assistant routes the query to the SQL pipeline, where it executes SQL queries against an SQLite3 database. The assistant uses OpenAI's endpoints for natural language processing to translate user queries into SQL queries.
-   * RAG Pipeline: For unstructured queries, the assistant utilizes the RAG pipeline with ChromaDB embeddings to retrieve context from past interactions or stored data. The assistant then uses OpenAI LLM endpoints to generate an insightful response based on the retrieved context.
+   * **SQL Pipeline**: For structured data, the assistant routes the query to the SQL pipeline, where it executes SQL queries against an SQLite3 database. The assistant uses OpenAI's endpoints for natural language processing to translate user queries into SQL queries.
+   * **RAG Pipeline**: For unstructured queries, the assistant utilizes the RAG pipeline with ChromaDB embeddings to retrieve context from past interactions or stored data. The assistant then uses OpenAI LLM endpoints to generate an insightful response based on the retrieved context.
      
 4. **OpenAI LLM API Calls**:
     * Both pipelines leverage OpenAI’s API for natural language processing and response generation:
