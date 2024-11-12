@@ -23,6 +23,9 @@ To run this project, Install Python (version 3.11 recommended) and use pip to in
    ```bash
    git clone https://github.com/yourusername/Drowsiness-Detection-System.git
    
+   ```bash
+   cd Airlines-AI-Assistant
+   
 2. Install the Dependencies
       ```bash
    pip install -r requirements.txt
@@ -118,3 +121,7 @@ Given that your current solution was developed with a minimal dataset, here are 
 6. Real-Time Data Integration:
     * Enhancement: Incorporate real-time airline data, such as live flight statuses, delays, and weather conditions, to offer more up-to-date responses.
     * Benefit: Provides users with dynamic and actionable insights, especially valuable for time-sensitive queries.
+
+## Contributor
+
+Karthik Patelkana
