@@ -21,10 +21,7 @@ To run this project, Install Python (version 3.11 recommended) and use pip to in
 ## Installation
 1. Clone the Repository
    ```bash
-   git clone https://github.com/yourusername/Drowsiness-Detection-System.git
-   
-   ```bash
-   cd Airlines-AI-Assistant
+   git clone https://github.com/karthikpatel-code/Airlines-AI-Assistant.git
    
 2. Install the Dependencies
       ```bash
