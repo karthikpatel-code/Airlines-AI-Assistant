@@ -29,7 +29,8 @@ chroma_col = chroma_client.get_or_create_collection(name = col_name)
 df = pd.read_csv(r"Flight Bookings.csv")
 df1 = pd.read_csv(r"Airline ID to Name.csv")
 
-df_merged = pd.merge(df, df1, how = 'left', on = ['airlie_id'])
+df_merged_1 = pd.merge(df, df1, how = 'left', on = ['airlie_id'])
+df_merged = df_merged_1.dropna()
 
 df_merged.rename(columns = {"flght#" : "flight_number", 'departure_dt': 'departure_date', "arrival_dt":"arrival_date", "arrivl_time" : "arrival_time", "dep_time":"departure_time", "passngr_nm" : "passngr_name", "seat_no":"seat_number", "inflight_ent": "inflight_entertainment"}, inplace = True)
 
